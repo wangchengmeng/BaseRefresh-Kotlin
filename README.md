@@ -120,7 +120,7 @@ compile 'org.jetbrains.anko:anko-sdk15:0.9.1'
 一系列封装后，常用的列表Adapter中所有的代码：
 
 	
-class RvListAdapter(private val mContext: Context, private val mLayout: Int, private val mDatas: List<ListBean>) : BaseAdapter<ListBean>(mContext, mLayout, mDatas) {
+	class RvListAdapter(private val mContext: Context, private val mLayout: Int, private val mDatas: List<ListBean>) : BaseAdapter<ListBean>(mContext, mLayout, mDatas) {
 
     constructor(context: Context, listData: ArrayList<ListBean>) : this(context, R.layout.item_list, listData)
 
