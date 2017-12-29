@@ -11,6 +11,7 @@ import org.jetbrains.anko.find
 /**
  * Created by wangchengm
  * on 2017/12/28.
+ * BaseViewHolder封装
  */
 open class BaseViewHolder(item: View?) : RecyclerView.ViewHolder(item) {
 
@@ -24,6 +25,9 @@ open class BaseViewHolder(item: View?) : RecyclerView.ViewHolder(item) {
         mCacheViews = SparseArray()
     }
 
+    /**
+     * 根据viewID获取对应的View
+     */
     fun <T : View> retrieveView(@IdRes viewID: Int): T {
         var view = mCacheViews.get(viewID)
 

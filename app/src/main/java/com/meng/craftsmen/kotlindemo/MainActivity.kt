@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initListener() {
-        mBtnJump2Main.onClick { view ->
+        mBtnJump2Main.onClick {
             Toast.makeText(this, "点击进入了", Toast.LENGTH_LONG).show()
-            start2Main()
+            startActivity<FoundActivity>("key" to "from mainactivity")
         }
 
         mBtnJump2List.onClick { view ->
@@ -28,15 +28,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        setContent("Hello-World")
+        mTvContent.text = "Hello-World"
         mBtnJump2Main.text = "点击进入"
-    }
-
-    private fun setContent(content: String) {
-        mTvContent.text = content
-    }
-
-    private fun start2Main() {
-        startActivity<FoundActivity>("key" to "from mainactivity")
     }
 }
