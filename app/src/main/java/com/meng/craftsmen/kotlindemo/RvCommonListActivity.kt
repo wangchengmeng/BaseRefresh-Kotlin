@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.View
 import com.meng.craftsmen.kotlindemo.adapter.RvListAdapter
 import com.meng.craftsmen.kotlindemo.bean.ListBean
@@ -79,10 +78,8 @@ class RvCommonListActivity : AppCompatActivity() {
 
         //上啦加载更多
         mRvCommonList.setOnTouchListener { _, _ ->
-
             if (!mRvCommonList.canScrollVertically(1)) {
                 mSwipeRefresh.isRefreshing = true
-                Log.d("aaa", "上啦加载")
                 //模拟刷新
                 Thread(Runnable {
                     SystemClock.sleep(3000)
